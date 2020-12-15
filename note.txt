@@ -1,3 +1,4 @@
 slot1: JSX phải khai báo className
 slot2: rendering element {} , handle event this.hello(), this.hello, ()=>{this.hello("hello")}
 state dữ trong 1 component cung cấp 1 phương thức là setState để re-render giao diện, props: truyền dữ liệu từ 1 component , conditional rendering if else 
+slot3 ôn tập

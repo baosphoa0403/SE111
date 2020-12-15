@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Slot2 from './slot2/slot2';
-import Ex2 from './slot2/Ex2';
-import Main from './BaiTapSlot2/main';
-import MainSlot4 from './slot4/MainSlot4';
+import MainSlotRedux5 from './slot5/MainSlot5';
+// import Slot2 from './slot2/slot2';
+// import Ex2 from './slot2/Ex2';
+// import Main from './BaiTapSlot2/main';
+// import MainSlot4 from './slot4/MainSlot4';
 // import Ex1 from "./EX1/ex1";
 // import Main from './EX2/main';
 // import Main2 from './EX3/main';
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +18,9 @@ function App() {
        {/* <Slot2 /> */}
        {/* <Ex2/> */}
        {/* <Main/>  */}
-       <MainSlot4/>
+       {/* <MainSlot4/> */}
+       <MainSlotRedux5/>
+
     </div>
   );
 }
