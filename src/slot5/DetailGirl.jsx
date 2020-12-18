@@ -41,6 +41,8 @@ import {connect} from "react-redux"
     );
   }
 }
+
+// falsthy 0 , "", null, undefine !123
 const mapStateToProps = (state) => {
   return {
      detailGirl: state.girlReducers.detailGirl

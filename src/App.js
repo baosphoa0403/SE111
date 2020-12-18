@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import MainSlotRedux5 from './slot5/MainSlot5';
+import DemoLifeCycle from './lifeCycle/demoLifeCycle';
+import HomeSlot6 from './handleForm/Home';
 // import Slot2 from './slot2/slot2';
 // import Ex2 from './slot2/Ex2';
 // import Main from './BaiTapSlot2/main';
@@ -19,8 +21,10 @@ function App() {
        {/* <Ex2/> */}
        {/* <Main/>  */}
        {/* <MainSlot4/> */}
-       <MainSlotRedux5/>
-       <h1>hello</h1>
+       {/* <MainSlotRedux5/> */}
+       {/* <h1>hello</h1> */}
+       {/* <DemoLifeCycle/> */}
+       <HomeSlot6/>
 
     </div>
   );
