@@ -2,3 +2,91 @@ slot1: JSX phải khai báo className
 slot2: rendering element {} , handle event this.hello(), this.hello, ()=>{this.hello("hello")}
 state dữ trong 1 component cung cấp 1 phương thức là setState để re-render giao diện, props: truyền dữ liệu từ 1 component , conditional rendering if else 
 slot3 ôn tập
+
+
+slot 6 call api npm i axios
+middlewre thunk , redux saga , oservable 
+router: npm i react-router-dom 
+
+============== Buoi 8 ==============
+ * Routing (basic)
+    npm install react-router-dom --save
+
+
+ * HTTP & Axios
+    npm install axios --save
+
+    npm install redux-thunk --save
+
+============== Buoi 9 ==============
+* HTTP & Axios (Chi tiet Phim)
+
+
+
+npm install redux-thunk --save
+
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
+
+
+============== Buoi 10 ==============
+* HOC
+* Routing (HomeLayout & AdminLayout)
+* Đăng nhập Admin
+-----------------------------------
+
+
+============= Buoi 11 ==============
+ * Auth admin
+ * Thêm Nguoi dung (giới thiệu cơ chế token)
+ * HOOKS
+
+ ============== Buoi 12 ==============
+ * Material UI
+    npm install @material-ui/core
+ * On tap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+npm install redux-thunk --save
+
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
+
+
+// b1 code lại call api listMovie , call tại component cho quen tay  
+// b2 tách ra call api ở action 
+// b3 chia path home, detail, listMoive  , làm 1 cái header để cho user bấm  path detail path="/detail/:id"
+// b4 trong listMovie  có movie bấm nút seeDetail thì nhảy quả trang detail logic là 
+// onlick thì phải có 3 cái props mặc  định của react  router dom cung cấp  this.props.history.push(`/detail/${id}`)
+// đồng thời làm soa để  lấy  dc cái id để call APi r bắn lên store

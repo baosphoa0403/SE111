@@ -1,32 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import MainSlotRedux5 from './slot5/MainSlot5';
-import DemoLifeCycle from './lifeCycle/demoLifeCycle';
-import HomeSlot6 from './handleForm/Home';
-// import Slot2 from './slot2/slot2';
-// import Ex2 from './slot2/Ex2';
-// import Main from './BaiTapSlot2/main';
-// import MainSlot4 from './slot4/MainSlot4';
-// import Ex1 from "./EX1/ex1";
-// import Main from './EX2/main';
-// import Main2 from './EX3/main';
-
+import ListMovie from './components/ListMovie/ListMovie';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from './page/Home/Home';
+import Detail from './page/Detail/Detail';
+import Header from './components/header';
 function App() {
   return (
-    <div className="App">
-       {/* <Ex1 /> */}
-       {/* <Main /> */}
-       {/* <Main2 /> */}
-       {/* <Slot2 /> */}
-       {/* <Ex2/> */}
-       {/* <Main/>  */}
-       {/* <MainSlot4/> */}
-       {/* <MainSlotRedux5/> */}
-       {/* <h1>hello</h1> */}
-       {/* <DemoLifeCycle/> */}
-       <HomeSlot6/>
-
-    </div>
+    // so sánh prefix tiền tố
+     <BrowserRouter>
+      <Header/>
+       <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/listMovie" component={ListMovie} />
+        <Route exact path="/detail/:id" component= {Detail}/>
+       </Switch>
+     </BrowserRouter>
   );
 }
 
