@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom"
-export default function Header() {
+import { connect } from "react-redux";
+ function Header(props) {
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-light bg-dark">
@@ -21,7 +22,7 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ">
             <li className="nav-item active ">
-              <NavLink exact activeStyle={{color: "red"}} className="nav-link  " to="/">
+              <NavLink exact activeStyle={{color: "red"}}  className="nav-link  " to="/">
                 Home <span className="sr-only">(current)</span>
               </NavLink>    
             </li>
@@ -31,11 +32,26 @@ export default function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact activeStyle={{color: "red"}}  className="nav-link " to="/detail">
-                detail
+              <NavLink exact activeStyle={{color: "red"}}  className="nav-link " to="/hoc"> 
+                hoc
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink exact activeStyle={{color: "red"}}  className="nav-link " to="/hook">
+               HOOK
+              </NavLink>
+            </li>
+             {props.user ? (
+               <>
+               <li style={{color: "white"}}>hello, {props.user.hoTen}</li>
+               <li style={{color: "orange"}} onClick={()=>{
+                 props.dispatch({type:"SIGN_IN_API",payload: null})
+                 localStorage.removeItem("user")
+               }}>Logout</li>
+               </>
+             ) : (
+              <>
+               <li className="nav-item">
               <NavLink exact activeStyle={{color: "red"}}  className="nav-link " to="/signIn">
                 sign in
               </NavLink>
@@ -45,9 +61,17 @@ export default function Header() {
                 sign up
               </NavLink>
             </li>
+              </>
+             )}
           </ul>
         </div>
       </nav>
     </>
   );
 }
+const mapStateProps = (state) => {
+   return {
+     user: state.signInReducer.user
+   }
+}
+export default connect(mapStateProps)(Header)

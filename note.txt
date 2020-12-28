@@ -11,8 +11,6 @@ router: npm i react-router-dom
 ============== Buoi 8 ==============
  * Routing (basic)
     npm install react-router-dom --save
-
-
  * HTTP & Axios
     npm install axios --save
 

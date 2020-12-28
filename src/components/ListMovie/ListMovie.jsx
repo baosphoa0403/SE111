@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import * as Action from "./module/action/actions";
 // import * as ActionType from "./module/constants/constants";
 import Movie from "../Movie";
+import { ToastContainer } from "react-toastify";
+import { Wrapped } from "../../HOC/Wrapped";
 class ListMovie extends Component {
   
   
@@ -26,6 +28,8 @@ class ListMovie extends Component {
     this.props.dispatch(Action.FetchListMovie)
 }
   render() {
+    console.log(this.props);
+    
     return (
       <div>
         <h1 className="text-center">List Movie</h1>
@@ -56,4 +60,4 @@ const mapStateToProps = state => {
 //          }
 //      }
 // }
-export default connect(mapStateToProps)(ListMovie);
+export default Wrapped(connect(mapStateToProps)(ListMovie));

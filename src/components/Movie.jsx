@@ -5,7 +5,7 @@ export default class Movie extends Component {
       this.props.haha.history.push(`/detail/${this.props.item.maPhim}`)
   }
   render() {    
-    console.log(this.props.haha);
+    // console.log(this.props.haha);
     
     let {item} = this.props
     return (
