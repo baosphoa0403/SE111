@@ -8,12 +8,16 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./redux/reducer/rootReducer";
 import thunk from "redux-thunk";
+// middleware Saga
+import createMiddleWareSaga from "redux-saga"; // b1
+import {rootSaga} from "../src/saga/rootSaga" // b2
+const middlewareSaga = createMiddleWareSaga(rootSaga);// b3
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
+  composeEnhancers(applyMiddleware(thunk, middlewareSaga)) // b4
 );
-
+middlewareSaga.run(rootSaga) // b5
 ReactDOM.render(
  
     <Provider store={store}>

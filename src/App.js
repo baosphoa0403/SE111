@@ -13,6 +13,7 @@ import HomeTemplate from "./template/HomeTemplate"
 import AdminTemplate from "./template/AdminTemplate"
 import HOC from './HOC/HOC';
 import { AuthLogin } from './HOC/AuthLogin';
+import Loading from './loading';
 function App() {
   const showMenuHome = routes => {
     if (routes && routes.length > 0) {
@@ -47,6 +48,7 @@ function App() {
     // so sánh prefix tiền tố
      <BrowserRouter>
       {/* <Header/> */}
+      {/* <Loading/> */}
        <Switch>
           {showMenuHome(routesHome)}
           {showMenuAdmin(routesAdmin)}

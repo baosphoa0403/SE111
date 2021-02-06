@@ -1,6 +1,7 @@
 import * as ActionType from "../constants/constants"
 const inititalState = {
-   listMovie: []
+   listMovie: [],
+   listShoes: []
 }
 const movieReducer  = (state=inititalState, action) => {
    
@@ -9,7 +10,10 @@ const movieReducer  = (state=inititalState, action) => {
         case ActionType.FETCH_LIST_MOVIE:
             state.listMovie = action.payload
             break;
-    
+        case "GetListShoes":
+            console.log(action);
+            state.listShoes = action.payload
+            break;
         default:
             break;
     }

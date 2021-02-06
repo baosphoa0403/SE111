@@ -10,6 +10,7 @@ import Dashboard from "../page/Admin/Dashboard";
 import AddUser from "../page/Admin/AddUser";
 import Hook from "../Hook/Hook";
 import HOC from "../HOC/HOC";
+import ReduxSaga from "../exSaga";
 // import HOOKS from "./HOOKS";
 // import Material from "./pages/home/Material";
 
@@ -53,6 +54,11 @@ const routesHome = [
     path: "/signIn",
     exact: false,
     component: SignIn
+  },
+  {
+    path: "/saga",
+    exact: false,
+    component: ReduxSaga
   }
 ];
 

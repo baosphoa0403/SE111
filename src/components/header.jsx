@@ -41,6 +41,11 @@ import { connect } from "react-redux";
                HOOK
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink exact activeStyle={{color: "red"}}  className="nav-link " to="/saga">
+               Redux Saga
+              </NavLink>
+            </li>
              {props.user ? (
                <>
                <li style={{color: "white"}}>hello, {props.user.hoTen}</li>
